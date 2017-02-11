@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<style>
+* {
+	margin: 0px;
+	padding: 0px;
+}
+.nav_wrap {
+	width: 100%;
+}
+.gnb {
+	margin: 0px auto;
+	width: 1000px;
+	position: relative;
+	z-index: 3000;
+}
+.gnb ul {
+	width: 100%;
+}
+.gnb ul::after {
+	clear: both;
+	display: block;
+	content: "";
+	list-style-type: none;
+}
+.gnb ul li {
+	letter-spacing: -1px;
+	font-family: 돋움;
+	font-size: 12px;
+	float: left;
+	list-style-type: none;
+}
+.gnb ul li a {
+	color: rgb(101, 101, 101);
+}
+.gnb .header_menu_img {
+	height: 35px;
+	text-align: center;
+	overflow: hidden;
+	margin-top: 0px;
+	display: block;
+	position: relative;
+}
+.gnb li div {
+}
+.border_color01 {
+	background: rgb(255, 255, 255);
+	border: 4px solid rgb(231, 55, 86);
+	left: 0px;
+	top: 35px;
+	width: 992px;
+	height: 70px;
+	display: none;
+	position: absolute;
+}
+.border_color02 {
+	background: rgb(255, 255, 255);
+	border: 4px solid rgb(250, 120, 15);
+	left: 0px;
+	top: 35px;
+	width: 992px;
+	height: 70px;
+	display: none;
+	position: absolute;
+}
+.border_color03 {
+	background: rgb(255, 255, 255);
+	border: 4px solid rgb(255, 196, 37);
+	left: 0px;
+	top: 35px;
+	width: 992px;
+	height: 70px;
+	display: none;
+	position: absolute;
+}
+.border_color04 {
+	background: rgb(255, 255, 255);
+	border: 4px solid rgb(115, 186, 31);
+	left: 0px;
+	top: 35px;
+	width: 992px;
+	height: 70px;
+	display: none;
+	position: absolute;
+}
+.border_color05 {
+	background: rgb(255, 255, 255);
+	border: 4px solid rgb(3, 131, 213);
+	left: 0px;
+	top: 35px;
+	width: 992px;
+	height: 70px;
+	display: none;
+	position: absolute;
+}
+.border_color06 {
+	background: rgb(255, 255, 255);
+	border: 4px solid rgb(40, 67, 204);
+	left: 0px;
+	top: 35px;
+	width: 992px;
+	height: 70px;
+	display: none;
+	position: absolute;
+}
+.border_color07 {
+	background: rgb(255, 255, 255);
+	border: 4px solid rgb(136, 50, 186);
+	left: 0px;
+	top: 35px;
+	width: 992px;
+	height: 70px;
+	display: none;
+	position: absolute;
+}
+.border_color08 {
+	background: rgb(255, 255, 255);
+	border: 4px solid rgb(12, 185, 196);
+	left: 0px;
+	top: 35px;
+	width: 992px;
+	height: 70px;
+	display: none;
+	position: absolute;
+}
+.border_color09 {
+	background: rgb(255, 255, 255);
+	border: 4px solid rgb(12, 185, 196);
+	left: 0px;
+	top: 35px;
+	width: 992px;
+	height: 70px;
+	display: none;
+	position: absolute;
+}
+.gnb li div p.tmt {
+	margin: 0px;
+	padding: 20px 0px 0px 20px;
+	float: left;
+}
+.gnb li div p.tmimg {
+	margin: 85px 0px 0px;
+	padding: 0px;
+	float: right;
+}
+.gnb li div ul {
+	margin: 14px 0px 3px 25px;
+	padding: 0px;
+	width: 650px;
+	height: 55px;
+	overflow: hidden;
+	float: left;
+}
+.gnb li div ul li {
+	padding: 0px 4px 0px 12px;
+	width: 145px;
+	height: auto;
+	font-weight: bold;
+	float: left;
+}
+.gnb li div ul li li a {
+	color: rgb(102, 102, 102);
+}
+.gnb li div ul ul {
+	margin: 0px;
+	float: none;
+}
+.gnb li div ul ul li {
+	padding: 3px 2px 3px 9px;
+	width: auto;
+	height: auto;
+	font-weight: normal;
+	float: none;
+}
+.gnb a img {
+	position: relative;
+}
+.gnb div ul li img {
+	position: static;
+}
+.gnb .on img {
+	top: -27px;
+}
+.gnb_sub2 {
+	left: 150px;
+}
+.gnb li div ul.tmtm {
+	margin: 0px 10px 3px;
+	padding: 0px;
+	width: 150px;
+	height: 180px;
+	overflow: hidden;
+	float: left;
+}
+.gnb li div ul.tmtm li {
+	padding: 2px 4px 4px 12px;
+	width: 150px;
+	height: auto;
+	font-weight: bold;
+	float: left;
+}
+.gnb li div ul.tmtm li li a {
+	color: rgb(102, 102, 102);
+}
+</style>
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script> 
+
+ <script> 
+
+ jQuery(function(){ 
+
+    jQuery('.gnb>ul>li').hover(        /* 마우스로 메인메뉴 하부 레이어 출력 및 제거 */ 
+
+    function(){gnbHover(jQuery(this));}, 
+
+    function(){gnbBlur(jQuery(this));} 
+
+    ).focus(function(){});  
+
+    jQuery('.gnb>ul>li').focusin(function(){    /* 키보드로 메인메뉴 접근했을 때 하부 레이어 출력 */ 
+
+       jQuery(this).next().find("div").hide();   
+
+       if(!jQuery(this).hasClass('on')) 
+
+       jQuery(this).find("a>img").css({'top':'-35px'}); 
+
+       jQuery(this).find("div").show(); 
+
+    }); 
+
+    jQuery('.gnb>ul>li').focusout(function(){    /* 키보드로 메인메뉴 포커스 빠질 때 */ 
+
+       if(!jQuery(this).hasClass('on')) 
+
+       jQuery(this).find("a>img").css({'top':'0px'});       
+
+    }); 
+
+    jQuery('.remove_main_layer').focusin(function(){  /* 키보드로 레이어 하부메뉴가 없는 메인메뉴 'e울산교육' 접근하면 전체(앞전)메뉴 layer 제거 */ 
+
+       jQuery('.gnb>ul>li').each(function(){ 
+
+          jQuery('.gnb>ul>li').find("div").hide(); 
+
+       });  
+
+       if(!jQuery(this).hasClass('on')) 
+
+       jQuery(this).find("a>img").css({'top':'-35px'}); 
+
+    }); 
+
+    jQuery('.qr').focusin(function(){      /* 키보드로 메인메뉴'전자민원' 갔다가 백으로 되돌아 왔을 때 전체(전자민원) 메뉴 layer 제거 */ 
+
+       jQuery('.gnb>ul>li').each(function(){ 
+
+          jQuery('.gnb>ul>li').find("div").hide(); 
+
+       });    
+
+    }); 
+
+ }); 
+
+ function gnbHover(jQuerythis) 
+
+ {  
+
+    if(!jQuerythis.hasClass('on')) 
+
+    jQuerythis.find("a>img").css({'top':'-35px'});  
+
+    if (jQuerythis.find(".zzz").length > 0) { 
+
+       jQuerythis.find("div").css({'background':'url(\"http://www.namgui.or.kr/image/menu2/tmbg2.png\")'}); 
+
+       jQuerythis.find("div").css({'height':'155px'}); 
+
+       jQuerythis.find("div").css({'padding-top':'10px'}); 
+
+       jQuerythis.find("div").show(); 
+
+       } else { 
+
+       jQuerythis.find("div").show(); 
+
+    } 
+
+ } 
+
+ function gnbBlur(jQuerythis) 
+
+ { 
+
+    if(!jQuerythis.hasClass('on')) 
+
+    jQuerythis.find("a>img").css({'top':'0px'}); 
+
+    jQuerythis.find("div").hide(); 
+
+ } 
+
+ </script> 
+
+</head>
+<body>
+<div id="header">
+  <div class="nav_wrap">
+    <div class="gnb">
+      <ul id="gnb">
+        <li> <a href="http://www.namgui.or.kr/use/use01.php" class="header_menu_img"><img src="http://www.namgui.or.kr/img/menu//menu01.gif" alt="센터소개" border=0></a>
+          <div class="border_color01" style="display: none;">
+            <p class="tmt"><img src="http://www.namgui.or.kr/img/menu//tmt01.png" alt="메뉴명"></p>
+            <ul>
+              <li><a href="http://www.namgui.or.kr/use/use01.php">영유아플라자이용안내</a></li>
+              <li><a href="http://www.namgui.or.kr/use/use04.php">놀이체험실</a></li>
+              <li><a href="http://www.namgui.or.kr/use/use02.php">그림책도서관</a></li>
+              <li><a href="http://www.namgui.or.kr/use/use03.php">장난감대여관</a></li>
+              <li><a href="http://www.namgui.or.kr/use/use03_01.php">장난감대여관(문수점)</a></li>
+              <li><a href="http://www.namgui.or.kr/use/use05.php">생태체험장</a></li>
+              <li><a href="http://www.namgui.or.kr/use/use06.php">센터의자원활동가신청</a></li>
+            </ul>
+          </div>
+        </li>
+        <li> <a href="http://www.namgui.or.kr/bbs/board.php?bo_table=childcare" class="header_menu_img"><img src="http://www.namgui.or.kr/img/menu//menu02.gif" alt="육아지원" border=0></a>
+          <div class="border_color02" style="display: none;">
+            <p class="tmt"><img src="http://www.namgui.or.kr/img/menu//tmt02.png" alt="메뉴명"></p>
+            <ul>
+              <li><a href="http://www.namgui.or.kr/bbs/board.php?bo_table=childcare">육아정보</a></li>
+              <li><a href="http://www.namgui.or.kr/child/child02.php">어린이집이용</a></li>
+              <li><a href="http://www.namgui.or.kr/child/child03.php">양육수당</a></li>
+              <li><a href="http://www.namgui.or.kr/child/child04.php">어린이집검색</a></li>
+              <li><a href="http://www.hospitalsearch.co.kr/">우리동네병원</a></li>
+              <li><a href="http://www.namgui.or.kr/child/child06.php">예방접종도우미</a></li>
+              <li><a href="http://www.namgui.or.kr/bbs/board.php?bo_table=performance">공연및나들이</a></li>
+            </ul>
+          </div>
+        </li>
+        <li> <a href="http://www.namgui.or.kr/nursery/nursery01.php" class="header_menu_img"><img src="http://www.namgui.or.kr/img/menu//menu03.gif" alt="어린이집지원" border=0></a>
+          <div class="border_color03" style="display: none;">
+            <p class="tmt"><img src="http://www.namgui.or.kr/img/menu//tmt03.png" alt="메뉴명"></p>
+            <ul>
+              <li><a href="http://www.namgui.or.kr/nursery/nursery01.php">보육행정</a></li>
+              <li><a href="http://www.namgui.or.kr/nursery/nursery02.php">평가인증</a></li>
+              <li><a href="http://www.namgui.or.kr/nursery/nursery03.php">보육과정</a></li>
+              <li><a href="http://www.namgui.or.kr/bbs/board.php?bo_table=safe_pds">영유아안전</a></li>
+              <li><a href="http://www.namgui.or.kr/bbs/board.php?bo_table=nutri_pds">영유아영양</a></li>
+              <li><a href="http://www.namgui.or.kr/nursery/nursery06.php">보육교직원정보</a></li>
+            </ul>
+          </div>
+        </li>
+        <li> <a href="http://www.namgui.or.kr/bbs/board.php?bo_table=schedule" class="header_menu_img"><img src="http://www.namgui.or.kr/img/menu//menu04.gif" alt="교육/행사" border=0></a>
+          <div class="border_color04" style="display: none;">
+            <p class="tmt"><img src="http://www.namgui.or.kr/img/menu//tmt04.png" alt="메뉴명"></p>
+            <ul>
+              <li><a href="http://www.namgui.or.kr/bbs/board.php?bo_table=schedule">교육/행사 신청하기</a></li>
+              <li><a href="http://www.namgui.or.kr/eduevent/eduevent02.php">교육/행사 신청안내</a></li>
+              <li><a href="http://www.namgui.or.kr/eduevent/completion.php">교육/행사 이수증출력</a></li>
+            </ul>
+          </div>
+        </li>
+        <li> <a href="http://www.namgui.or.kr/consult/consult01.php" class="header_menu_img"><img src="http://www.namgui.or.kr/img/menu//menu05.gif" alt="전문상담실" border=0></a>
+          <div class="border_color05" style="display: none;">
+            <p class="tmt"><img src="http://www.namgui.or.kr/img/menu//tmt05.png" alt="메뉴명"></p>
+            <ul>
+              <li><a href="http://www.namgui.or.kr/consult/consult01.php">오프라인상담안내</a></li>
+              <li><a href="http://www.namgui.or.kr/bbs/board.php?bo_table=consult_grow">온라인상담</a></li>
+            </ul>
+          </div>
+        </li>
+        <li> <a href="http://www.namgui.or.kr/bbs/board.php?bo_table=notice" class="header_menu_img"><img src="http://www.namgui.or.kr/img/menu//menu06.gif" alt="커뮤니티" border=0></a>
+          <div class="border_color06" style="display: none;">
+            <p class="tmt"><img src="http://www.namgui.or.kr/img/menu//tmt06.png" alt="메뉴명"></p>
+            <ul>
+              <li><a href="http://www.namgui.or.kr/bbs/board.php?bo_table=notice">공지사항</a></li>
+              <li><a href="http://www.namgui.or.kr/bbs/board.php?bo_table=news">보육뉴스</a></li>
+              <li><a href="http://www.namgui.or.kr/bbs/board.php?bo_table=job_offer">구인/구직</a></li>
+              <li><a href="http://www.namgui.or.kr/bbs/board.php?bo_table=cafe_blog">카페/블로그</a></li>
+              <li><a href="http://www.namgui.or.kr/bbs/board.php?bo_table=qna">센터에물어보기</a></li>
+              <li><a href="http://www.namgui.or.kr/bbs/board.php?bo_table=poll_new">설문조사</a></li>
+            </ul>
+          </div>
+        </li>
+        <li> <a href="http://www.namgui.or.kr/introduce/introduce01.php" class="header_menu_img"><img src="http://www.namgui.or.kr/img/menu//menu07.gif" alt="센터소개" border=0></a>
+          <div class="border_color07" style="display: none;">
+            <p class="tmt"><img src="http://www.namgui.or.kr/img/menu//tmt07.png" alt="메뉴명"></p>
+            <ul>
+              <li><a href="http://www.namgui.or.kr/introduce/introduce01.php">인사말</a></li>
+              <li><a href="http://www.namgui.or.kr/introduce/introduce02.php">설립목적/연혁/현황</a></li>
+              <li><a href="http://www.namgui.or.kr/introduce/introduce03.php">운영조직</a></li>
+              <li><a href="http://www.namgui.or.kr/introduce/introduce04.php">사업안내</a></li>
+              <li><a href="http://www.namgui.or.kr/introduce/introduce05.php">오시는길</a></li>
+              <li><a href="http://www.namgui.or.kr/bbs/board.php?bo_table=issue_data">발간자료</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>
